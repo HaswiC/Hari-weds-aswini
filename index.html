@@ -3,72 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hari & Aswini - Wedding Invitation</title>
+    <title>Hari & Aswini - Our Wedding</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap');
+
         body {
-            background-color: #f0f4f8;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        .invitation-card {
-            max-width: 600px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect width="100%" height="100%" fill="%23f1f1f1"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23e0e0e0" font-size="50">Wedding Background</text></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .couple-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: #fff;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .countdown-item {
+            background-color: rgba(255,255,255,0.2);
+            padding: 10px 20px;
             border-radius: 10px;
+            text-align: center;
+        }
+
+        .event-details {
+            background-color: white;
+            padding: 50px 0;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .location-card {
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .couple-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 50px 0;
+        }
+
+        .couple-gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .couple-gallery img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto px-4">
-        <div class="invitation-card text-center">
-            <h1 class="text-4xl font-bold mb-6 text-pink-600">Wedding Invitation</h1>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="text-center">
+            <h1 class="couple-names mb-4">Hari & Aswini</h1>
+            <h2 class="text-2xl mb-6">Are Getting Married</h2>
+            <h3 class="text-xl mb-8">17 February, 2025</h3>
             
-            <div class="mb-6">
-                <h2 class="text-3xl font-semibold text-gray-800 mb-2">Hari & Aswini</h2>
-                <p class="text-gray-600">Cordially invite you to celebrate our wedding</p>
-            </div>
-
- <div class="bg-gray-50 p-4 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2">Engagement</h3>
-                    <p>Date: 16-Feb-2025</p>
-                    <p>Time: 7:00 PM onwards</p>
-                    <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" 
-                       class="text-blue-600 hover:underline" target="_blank">View Location</a>
+            <!-- Countdown Timer -->
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span id="days" class="text-3xl block">00</span>
+                    Days
                 </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2">Marriage</h3>
-                    <p>Date: 17-Feb-2025</p>
-                    <p>Time: 4:30 AM - 6:00 AM</p>
-                    <a href="https://www.google.com/maps/place/Kaattu+Azhagiya+Singar+Temple,+Srirangam/@10.8601524,78.6962539,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf5d5bc07798f:0xdc6ebbf767389235!8m2!3d10.8601471!4d78.6988288!16s%2Fm%2F0gw_hz5?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" 
-                       class="text-blue-600 hover:underline" target="_blank">View Location</a>
+                <div class="countdown-item">
+                    <span id="hours" class="text-3xl block">00</span>
+                    Hours
                 </div>
-                
-               
-                
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2">Reception</h3>
-                    <p>Date: 16-Feb-2025</p>
-                    <p>Time: 9:00 PM onwards</p>
-                    <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" 
-                       class="text-blue-600 hover:underline" target="_blank">View Location</a>
+                <div class="countdown-item">
+                    <span id="minutes" class="text-3xl block">00</span>
+                    Minutes
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="text-3xl block">00</span>
+                    Seconds
                 </div>
             </div>
-
-            <div class="mb-6">
-                <h3 class="font-bold text-xl mb-2">Live Streaming</h3>
-                <a href="https://www.youtube.com/@OneWayKadhal" 
-                   class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600" 
-                   target="_blank">Watch Live on YouTube</a>
-            </div>
-
-            <footer class="mt-6 text-gray-500">
-                <p>We can't wait to share our special day with you!</p>
-            </footer>
         </div>
-    </div>
+    </section>
+
+    <!-- Couple Gallery -->
+    <section class="container mx-auto px-4 couple-gallery">
+        <img src="/api/placeholder/400/300?text=Hari" alt="Hari" class="shadow-lg">
+        <img src="/api/placeholder/400/300?text=Together" alt="Couple" class="shadow-lg">
+        <img src="/api/placeholder/400/300?text=Aswini" alt="Aswini" class="shadow-lg">
+    </section>
+
+    <!-- Event Details -->
+    <section class="event-details text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-semibold mb-12">Our Special Days</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Engagement -->
+                <div class="location-card">
+                    <h3 class="text-2xl font-semibold mb-4">Engagement</h3>
+                    <img src="/api/placeholder/400/250?text=Engagement" alt="Engagement" class="mb-4 rounded-lg">
+                    <p class="mb-2">Date: 16 February, 2025</p>
+                    <p class="mb-2">Time: 7:00 PM onwards</p>
+                    <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" 
+                       target="_blank" class="text-blue-600 hover:underline">View Location</a>
+                </div>
+
+                <!-- Reception -->
+                <div class="location-card">
+                    <h3 class="text-2xl font-semibold mb-4">Reception</h3>
+                    <img src="/api/placeholder/400/250?text=Reception" alt="Reception" class="mb-4 rounded-lg">
+                    <p class="mb-2">Date: 16 February, 2025</p>
+                    <p class="mb-2">Time: 9:00 PM onwards</p>
+                    <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" 
+                       target="_blank" class="text-blue-600 hover:underline">View Location</a>
+                </div>
+
+                <!-- Marriage -->
+                <div class="location-card">
+                    <h3 class="text-2xl font-semibold mb-4">Marriage</h3>
+                    <img src="/api/placeholder/400/250?text=Marriage" alt="Marriage" class="mb-4 rounded-lg">
+                    <p class="mb-2">Date: 17 February, 2025</p>
+                    <p class="mb-2">Time: 4:30 AM - 6:00 AM</p>
+                    <a href="https://www.google.com/maps/place/Kaattu+Azhagiya+Singar+Temple,+Srirangam/@10.8601524,78.6962539,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf5d5bc07798f:0xdc6ebbf767389235!8m2!3d10.8601471!4d78.6988288!16s%2Fm%2F0gw_hz5?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" 
+                       target="_blank" class="text-blue-600 hover:underline">View Location</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Streaming -->
+    <section class="text-center bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold mb-8">Can't Be There?</h2>
+            <a href="https://www.youtube.com/@OneWayKadhal" 
+               class="bg-red-500 text-white px-6 py-3 rounded-full hover:bg-red-600 transition duration-300" 
+               target="_blank">Watch Live on YouTube</a>
+        </div>
+    </section>
+
+    <script>
+        // Countdown Timer Script
+        function updateCountdown() {
+            const weddingDate = new Date('2025-02-17T04:30:00');
+            const now = new Date();
+            const difference = weddingDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days < 10 ? '0' + days : days;
+            document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+            document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+    </script>
 </body>
 </html>
