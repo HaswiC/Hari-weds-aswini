@@ -1,54 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Wedding Celebration</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-    <style>
-        /* ... (Your existing CSS styles) ... */
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Celebration</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #fff5f5;
+            color: #4a4a4a;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                        url('/api/placeholder/800/400');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff758c;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .names {
+            font-size: 2em;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        .date {
+            font-size: 1.5em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: #ff758c;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff758c;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #ff8fa3;
+        }
+
+        .location-info {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .countdown {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .hearts {
+            color: #ff758c;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .names {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header animate__animated animate__fadeIn">
-            <h1>We're Getting Married</h1>
-            <div class="names"> Hari weds Aswini </div>
-            <div class="date">February 17, 2025</div>
+    <div class="container">
+        <div class="header animate__animated animate__fadeIn">
+            <h1>We're Getting Married</h1>
+            <div class="names"> Hari weds Aswini </div>
+            <div class="date">February 17, 2025</div>
+           
+        </div>
+
+        <div class="section animate__animated animate__fadeInUp">
+            <h2>Ceremony Venue</h2>
+            <div class="location-info">
+                <p> Arulmigu Kattlagiya Singar Sannathi</p>
+                <p> Thiruvanaikoil, Srirangam, Trichy </p>
+                <p>4:30 AM - 6:00AM </p>
+            </div>
+             <a href="https://www.google.com/maps/place/Kaattu+Azhagiya+Singar+Temple,+Srirangam/@10.8601497,78.6975413,351m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf5d5bc07798f:0xdc6ebbf767389235!8m2!3d10.8601471!4d78.6988288!16s%2Fm%2F0gw_hz5!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" class="btn" target="_blank">View Location</a>
+
+        </div>
+
+        <div class="section animate__animated animate__fadeInUp">
+            <h2>Reception Venue</h2>
+            <div class="location-info">
+                <p>Rail Mahal </p>
+                <p>Opp. to LKS Mahal, Trichy</p>
+                <p>7:00 PM onwards</p>
+            </div>
+            <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" class="btn" target="_blank">View Location</a>
         </div>
 
-        <div class="section animate__animated animate__fadeInUp">
-            <h2>Ceremony Venue</h2>
-            <div class="location-info">
-                <p> Arulmigu Kattlagiya Singar Sannathi</p>
-                <p> Thiruvanaikoil, Srirangam, Trichy </p>
-                <p>4:30 AM - 6:00AM </p>
-            </div>
-            <a href="https://www.google.com/maps/place/Kaattu+Azhagiya+Singar+Temple,+Srirangam/@10.8601497,78.6975413,351m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf5d5bc07798f:0xdc6ebbf767389235!8m2!3d10.8601471!4d78.6988288!16s%2Fm%2F0gw_hz5!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" class="btn" target="_blank">View Location</a> </div>
+        <div class="section animate__animated animate__fadeInUp">
+            <h2>Wedding Highlights</h2>
+            <a href="www.youtube.com/@OneWayKadhal" class="btn">Watch Our Story</a>
+        </div>
 
-        <div class="section animate__animated animate__fadeInUp">
-            <h2>Reception Venue</h2>
-            <div class="location-info">
-                <p>Rail Mahal </p>
-                <p>Opp. to LKS Mahal, Trichy</p>
-                <p>7:00 PM onwards</p>
-            </div>
-            <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" class="btn" target="_blank">View Location</a>
-        </div>
+        
+        <div class="footer">
+            <p>We can't wait to celebrate with you!</p>
+            <p class="hearts">❤️</p>
+        </div>
+    </div>
 
-        <div class="section animate__animated animate__fadeInUp">
-            <h2>Wedding Highlights</h2>
-            <a href="www.youtube.com/@OneWayKadhal" class="btn" target="_blank">Watch Our Story</a>
-        </div>
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('2025-02-17T10:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
 
-        <div class="footer">
-            <p>We can't wait to celebrate with you!</p>
-            <p class="hearts">❤️</p>
-        </div>
-    </div>
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-    <script>
-        // ... (Your existing JavaScript countdown code) ...
-    </script>
+            document.getElementById('countdown').innerHTML = `${days} Days ${hours} Hours ${minutes} Minutes`;
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000 * 60); // Update every minute
+    </script>
 </body>
 </html>
