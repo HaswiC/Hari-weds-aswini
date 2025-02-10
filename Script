@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.background {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.gallery-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 80%;
+}
+
+.gallery-container img {
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social a {
+    display: inline-block;
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
