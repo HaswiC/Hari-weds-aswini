@@ -1,199 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hari & Aswini - Our Wedding</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap');
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect width="100%" height="100%" fill="%23f1f1f1"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23e0e0e0" font-size="50">Wedding Background</text></svg>');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
-        .couple-names {
-            font-family: 'Great Vibes', cursive;
-            font-size: 4rem;
-            color: #fff;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .countdown-item {
-            background-color: rgba(255,255,255,0.2);
-            padding: 10px 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .event-details {
-            background-color: white;
-            padding: 50px 0;
-        }
-
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .location-card {
-            background-color: rgba(255,255,255,0.9);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .couple-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 50px 0;
-        }
-
-        .couple-gallery img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .couple-gallery img:hover {
-            transform: scale(1.05);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hari & Aswini's Wedding</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="text-center">
-            <h1 class="couple-names mb-4">Hari & Aswini</h1>
-            <h2 class="text-2xl mb-6">Are Getting Married</h2>
-            <h3 class="text-xl mb-8">17 February, 2025</h3>
-            
-            <!-- Countdown Timer -->
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <span id="days" class="text-3xl block">00</span>
-                    Days
-                </div>
-                <div class="countdown-item">
-                    <span id="hours" class="text-3xl block">00</span>
-                    Hours
-                </div>
-                <div class="countdown-item">
-                    <span id="minutes" class="text-3xl block">00</span>
-                    Minutes
-                </div>
-                <div class="countdown-item">
-                    <span id="seconds" class="text-3xl block">00</span>
-                    Seconds
-                </div>
-            </div>
-        </div>
+  <!-- Video Background -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"> <!-- Replace with your dark-themed video URL -->
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <!-- Header Section -->
+    <header>
+      <h1>Hari & Aswini</h1>
+      <h2>We are getting married!</h2>
+      <p>Join us in celebrating our love</p>
+    </header>
+
+    <!-- Event Details Section -->
+    <section class="event-details">
+      <div class="event-card">
+        <h3>Wedding</h3>
+        <p>📅 17-Feb-2025</p>
+        <p>⏰ 4:30 AM to 6:00 AM</p>
+        <p>📍 <a href="https://www.google.com/maps/place/Kaattu+Azhagiya+Singar+Temple,+Srirangam/@10.8601524,78.6962539,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf5d5bc07798f:0xdc6ebbf767389235!8m2!3d10.8601471!4d78.6988288!16s%2Fm%2F0gw_hz5?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">Kaattu Azhagiya Singar Temple, Srirangam</a></p>
+      </div>
+
+      <div class="event-card">
+        <h3>Reception</h3>
+        <p>📅 16-Feb-2025</p>
+        <p>⏰ 9:00 PM onwards</p>
+        <p>📍 <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">Rail Mahal</a></p>
+      </div>
+
+      <div class="event-card">
+        <h3>Engagement</h3>
+        <p>📅 16-Feb-2025</p>
+        <p>⏰ 7:00 PM onwards</p>
+        <p>📍 <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">Rail Mahal</a></p>
+      </div>
     </section>
 
-    <!-- Couple Gallery -->
-    <section class="container mx-auto px-4 couple-gallery">
-        <img src="https://raw.githubusercontent.com/HaswiC/Hari-weds-aswini/refs/heads/main/pics/Hari C.jpg" alt="Hari" class="shadow-lg">
-        <img src="https://raw.githubusercontent.com/HaswiC/Hari-weds-aswini/refs/heads/main/pics/Hari C.jpg" alt="Couple" class="shadow-lg">
-        <img src="https://raw.githubusercontent.com/HaswiC/Hari-weds-aswini/refs/heads/main/pics/Hari C.jpg" alt="Aswini" class="shadow-lg">
+    <!-- Live Event Section -->
+    <section class="live-event">
+      <h3>Live Event</h3>
+      <p>Watch the live stream on YouTube:</p>
+      <a href="https://www.youtube.com/@OneWayKadhal" target="_blank" class="live-button">Watch Live</a>
     </section>
 
-    <!-- Event Details -->
-    <section class="event-details text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-semibold mb-12">Our Special Days</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Engagement -->
-                <div class="location-card">
-                    <h3 class="text-2xl font-semibold mb-4">Engagement</h3>
-                    <img src="/api/placeholder/400/250?text=Engagement" alt="Engagement" class="mb-4 rounded-lg">
-                    <p class="mb-2">Date: 16 February, 2025</p>
-                    <p class="mb-2">Time: 7:00 PM onwards</p>
-                    <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" 
-                       target="_blank" class="text-blue-600 hover:underline">View Location</a>
-                </div>
-
-                <!-- Reception -->
-                <div class="location-card">
-                    <h3 class="text-2xl font-semibold mb-4">Reception</h3>
-                    <img src="/api/placeholder/400/250?text=Reception" alt="Reception" class="mb-4 rounded-lg">
-                    <p class="mb-2">Date: 16 February, 2025</p>
-                    <p class="mb-2">Time: 9:00 PM onwards</p>
-                    <a href="https://www.google.com/maps/place/Rail+Mahal/@10.7933784,78.6769333,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf56212d5e06d:0x97e9d72bfdc5b966!8m2!3d10.7933731!4d78.6795082!16s%2Fg%2F11rtrfhkt2?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" 
-                       target="_blank" class="text-blue-600 hover:underline">View Location</a>
-                </div>
-
-                <!-- Marriage -->
-                <div class="location-card">
-                    <h3 class="text-2xl font-semibold mb-4">Marriage</h3>
-                    <img src="/api/placeholder/400/250?text=Marriage" alt="Marriage" class="mb-4 rounded-lg">
-                    <p class="mb-2">Date: 17 February, 2025</p>
-                    <p class="mb-2">Time: 4:30 AM - 6:00 AM</p>
-                    <a href="https://www.google.com/maps/place/Kaattu+Azhagiya+Singar+Temple,+Srirangam/@10.8601524,78.6962539,702m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf5d5bc07798f:0xdc6ebbf767389235!8m2!3d10.8601471!4d78.6988288!16s%2Fm%2F0gw_hz5?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" 
-                       target="_blank" class="text-blue-600 hover:underline">View Location</a>
-                </div>
-            </div>
-        </div>
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <h3>Gallery</h3>
+      <div class="gallery-container">
+        <img src="https://raw.githubusercontent.com/HaswiC/Hari-weds-aswini/refs/heads/main/pics/Hari C.jpg" alt="Image 1">
+        <img src="https://raw.githubusercontent.com/HaswiC/Hari-weds-aswini/refs/heads/main/pics/Hari C.jpg" alt="Image 2">
+        <img src="https://raw.githubusercontent.com/HaswiC/Hari-weds-aswini/refs/heads/main/pics/Hari C.jpg" alt="Image 3">
+        <img src="https://raw.githubusercontent.com/HaswiC/Hari-weds-aswini/refs/heads/main/pics/Hari C.jpg" alt="Image 4">
+        <img src="https://raw.githubusercontent.com/HaswiC/Hari-weds-aswini/refs/heads/main/pics/Hari C.jpg" alt="Image 5">
+      </div>
     </section>
 
-    <!-- Live Streaming -->
-    <section class="text-center bg-gray-100 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-semibold mb-8">Can't Be There?</h2>
-            <a href="https://www.youtube.com/@OneWayKadhal" 
-               class="bg-red-500 text-white px-6 py-3 rounded-full hover:bg-red-600 transition duration-300" 
-               target="_blank">Watch Live on YouTube</a>
-        </div>
+    <!-- Instagram Section -->
+    <section class="instagram-profiles">
+      <h3>Follow Us</h3>
+      <div class="instagram-links">
+        <a href="https://www.instagram.com/yourprofile1" target="_blank"><i class="fab fa-instagram"></i> Hari's Instagram</a>
+        <a href="https://www.instagram.com/yourprofile2" target="_blank"><i class="fab fa-instagram"></i> Aswini's Instagram</a>
+      </div>
     </section>
-
-    <script>
-        // Countdown Timer Script
-        function updateCountdown() {
-            const weddingDate = new Date('2025-02-17T04:30:00');
-            const now = new Date();
-            const difference = weddingDate - now;
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = days < 10 ? '0' + days : days;
-            document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
-            document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
-            document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
-        }
-
-        // Update countdown every second
-        setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call
-    </script>
+  </div>
 </body>
 </html>
