@@ -1,0 +1,35 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const countDownDate = new Date("Feb 17, 2025 04:30:00").getTime();
+    const countdownElement = document.getElementById("countdown");
+    
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+        
+        if (distance < 0) {
+            countdownElement.innerHTML = "The wedding has begun!";
+            return;
+        }
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    const galleryContainer = document.querySelector(".gallery-container");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+    
+    prevButton.addEventListener("click", () => {
+        galleryContainer.scrollBy({ left: -300, behavior: "smooth" });
+    });
+    
+    nextButton.addEventListener("click", () => {
+        galleryContainer.scrollBy({ left: 300, behavior: "smooth" });
+    });
+});
